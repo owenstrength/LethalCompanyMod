@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LethalCompanyTemplate.Patches
+namespace MolesterLootBug.Patches
 {
     [HarmonyPatch(typeof(HoarderBugAI))]
     internal class LootBugPatch

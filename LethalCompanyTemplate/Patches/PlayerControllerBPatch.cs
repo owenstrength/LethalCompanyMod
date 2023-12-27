@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 
-namespace LethalCompanyTemplate.Patches
+namespace MolesterLootBug.Patches
 {
 
     internal class PlayerControllerBPatch

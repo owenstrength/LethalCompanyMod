@@ -13,7 +13,7 @@ namespace MolesterLootBug
     public class Plugin : BaseUnityPlugin
     {
 
-        private const string PLUGIN_GUID = "EvilLootBug by Owen";
+        private const string PLUGIN_GUID = "EvilLootBugByOwen.1.10";
         private const string PLUGIN_NAME = "Molester Loot Bug";
         private const string PLUGIN_VERSION = "0.2";
 
