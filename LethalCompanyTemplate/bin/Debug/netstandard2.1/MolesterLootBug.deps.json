@@ -13,7 +13,7 @@
           "BepInEx.Core": "5.4.21",
           "BepInEx.PluginInfoProps": "1.1.0",
           "UnityEngine.Modules": "2022.3.9",
-          "Assembly-CSharp": "0.0.0.0",
+          "Assembly-CSharp-nstrip": "0.0.0.0",
           "Unity.Netcode.Runtime": "0.0.0.0"
         },
         "runtime": {
@@ -354,9 +354,9 @@
         }
       },
       "UnityEngine.Modules/2022.3.9": {},
-      "Assembly-CSharp/0.0.0.0": {
+      "Assembly-CSharp-nstrip/0.0.0.0": {
         "runtime": {
-          "Assembly-CSharp.dll": {
+          "Assembly-CSharp-nstrip.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
           }
@@ -916,7 +916,7 @@
       "path": "unityengine.modules/2022.3.9",
       "hashPath": "unityengine.modules.2022.3.9.nupkg.sha512"
     },
-    "Assembly-CSharp/0.0.0.0": {
+    "Assembly-CSharp-nstrip/0.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

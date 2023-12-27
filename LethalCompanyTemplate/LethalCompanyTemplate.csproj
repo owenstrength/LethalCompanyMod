@@ -25,7 +25,7 @@
         <HintPath>F:\SteamLibrary\steamapps\common\Lethal Company\BepInEx\core\0Harmony.dll</HintPath>
       </Reference>
       <Reference Include="Assembly-CSharp">
-        <HintPath>F:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Assembly-CSharp.dll</HintPath>
+        <HintPath>F:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Assembly-CSharp-nstrip.dll</HintPath>
       </Reference>
       <Reference Include="BepInEx">
         <HintPath>F:\SteamLibrary\steamapps\common\Lethal Company\BepInEx\core\BepInEx.dll</HintPath>
@@ -39,20 +39,5 @@
       <Reference Include="UnityEngine.CoreModule">
         <HintPath>F:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       </Reference>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Compile Update="Patches\Resource1.Designer.cs">
-        <DesignTime>True</DesignTime>
-        <AutoGen>True</AutoGen>
-        <DependentUpon>Resource1.resx</DependentUpon>
-      </Compile>
-    </ItemGroup>
-
-    <ItemGroup>
-      <EmbeddedResource Update="Patches\Resource1.resx">
-        <Generator>ResXFileCodeGenerator</Generator>
-        <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
-      </EmbeddedResource>
     </ItemGroup>
 </Project>

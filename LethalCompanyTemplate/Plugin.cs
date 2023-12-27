@@ -58,7 +58,7 @@ namespace MolesterLootBug
         {
             public bool isHoldingPlayer = false;
             public PlayerControllerB HeldPlayer = null;
-            public float holdTimeRemaining = bugHoldTime;
+            public float CanHoldTime = bugHoldTime;
         }
 
         [HarmonyPatch(typeof(PlayerControllerB), "Awake")]
@@ -99,7 +99,7 @@ namespace MolesterLootBug
                 Plugin.mls.LogInfo($"PlayerServer Pos at {__instance.serverPlayerPosition}");
                 Plugin.mls.LogInfo($"Local Pos at {__instance.serverPlayerPosition}");
                 Plugin.mls.LogInfo($"Loot Pos at {isHeldData.HoarderInstance.serverPosition}");
-                Plugin.mls.LogInfo($"Bug Holding Player. Time left: {isHeldData.HoarderInstance.GetComponent<HoldingData>().holdTimeRemaining}");
+                Plugin.mls.LogInfo($"Bug Holding Player. Time left: {isHeldData.holdTimeRemaining}");
 
                 // Reduce the hold time remaining
                 isHeldData.holdTimeRemaining -= Time.deltaTime;
@@ -111,7 +111,8 @@ namespace MolesterLootBug
                 {
                     // Release the player
                     isHeldData.isHeld = false;
-                    isHeldData.holdTimeRemaining = 8.0f;
+                    isHeldData.holdTimeRemaining = bugHoldTime;
+                    isHeldData.HoarderInstance.gameObject.GetComponent<HoldingData>().CanHoldTime = bugHoldTime;
 
                     var isHoldingData = isHeldData.HoarderInstance.gameObject.GetComponent<HoldingData>();
                     if (isHoldingData != null)
@@ -140,7 +141,7 @@ namespace MolesterLootBug
         {
             var isHoldingData = __instance.gameObject.GetComponent<HoldingData>();
 
-            if (isHoldingData.isHoldingPlayer == false && Plugin.random.Next(0, 2) == 0)
+            if (isHoldingData.isHoldingPlayer == false && Plugin.random.Next(0, 2) == 0 && !__instance.isEnemyDead && isHoldingData.CanHoldTime <= 0)
             {
                 var playerControllerB = other.GetComponent<PlayerControllerB>();
 
@@ -156,7 +157,7 @@ namespace MolesterLootBug
 
         [HarmonyPatch(typeof(HoarderBugAI), "Update")]
         [HarmonyPostfix]
-        static void BugUpdate(HoarderBugAI __instance, ref float __timeSinceHittingPlayer)
+        static void BugUpdate(HoarderBugAI __instance)
         {
             var isHoldingData = __instance.gameObject.GetComponent<HoldingData>();
 
@@ -168,7 +169,7 @@ namespace MolesterLootBug
                 // isAngry is private
                 __instance.angryAtPlayer = null;
 
-                __timeSinceHittingPlayer = 5.0f;
+                __instance.timeSinceHittingPlayer = -5.0f;
 
                 if (__instance.isEnemyDead)
                 {
@@ -178,6 +179,9 @@ namespace MolesterLootBug
                 }
 
                 
+            } else
+            {
+                isHoldingData.CanHoldTime -= Time.deltaTime;
             }
         }
 

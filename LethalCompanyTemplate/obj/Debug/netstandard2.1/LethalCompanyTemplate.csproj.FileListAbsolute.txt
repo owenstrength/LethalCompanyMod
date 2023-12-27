@@ -4,7 +4,6 @@ C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\obj\D
 C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.AssemblyInfoInputs.cache
 C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.AssemblyInfo.cs
 C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.csproj.CoreCompileInputs.cache
-C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\bin\Debug\netstandard2.1\Assembly-CSharp.dll
 C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\bin\Debug\netstandard2.1\Unity.Netcode.Runtime.dll
 C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\bin\Debug\netstandard2.1\Unity.Animation.Rigging.dll
 C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\bin\Debug\netstandard2.1\Unity.TextMeshPro.dll
@@ -46,5 +45,4 @@ C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\bin\D
 C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\bin\Debug\netstandard2.1\MolesterLootBug.pdb
 C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\MolesterLootBug.dll
 C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\MolesterLootBug.pdb
-C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.Patches.Resource1.resources
-C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.csproj.GenerateResource.cache
+C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\bin\Debug\netstandard2.1\Assembly-CSharp-nstrip.dll
