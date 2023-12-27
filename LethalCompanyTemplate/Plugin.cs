@@ -156,7 +156,7 @@ namespace MolesterLootBug
 
         [HarmonyPatch(typeof(HoarderBugAI), "Update")]
         [HarmonyPostfix]
-        static void BugUpdate(HoarderBugAI __instance)
+        static void BugUpdate(HoarderBugAI __instance, ref bool ___IsAngry)
         {
             var isHoldingData = __instance.gameObject.GetComponent<HoldingData>();
 
@@ -164,7 +164,11 @@ namespace MolesterLootBug
             {
                 Plugin.mls.LogInfo("Bug Holding Player.");
 
-                __instance.angryTimer += 2 * Time.deltaTime;
+                __instance.angryTimer -= 2 * Time.deltaTime;
+                // isAngry is private
+                ___IsAngry = false;
+                __instance.angryAtPlayer = null;
+
 
                 MethodInfo methodExitChase = typeof(HoarderBugAI).GetMethod("ExitChaseMode");
 
@@ -177,6 +181,16 @@ namespace MolesterLootBug
                     Plugin.mls.LogWarning("ExitChaseMode Method DNE");
                 }
             }
+        }
+
+        // fix getting stuck when bug is killed
+        [HarmonyPatch(typeof(HoarderBugAI), "KillEnemy")]
+        [HarmonyPrefix]
+        static void BugKill(HoarderBugAI __instance)
+        {
+            var isHoldingData = __instance.gameObject.GetComponent<HoldingData>();
+            isHoldingData.isHoldingPlayer = false;
+            isHoldingData.HeldPlayer.GetComponent<BeingHeldData>().isHeld = false;
         }
 
     }

@@ -40,4 +40,19 @@
         <HintPath>F:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       </Reference>
     </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Patches\Resource1.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Resource1.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Patches\Resource1.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
 </Project>

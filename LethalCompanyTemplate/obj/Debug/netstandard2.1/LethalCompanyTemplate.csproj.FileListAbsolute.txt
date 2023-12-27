@@ -46,3 +46,5 @@ C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\bin\D
 C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\bin\Debug\netstandard2.1\MolesterLootBug.pdb
 C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\MolesterLootBug.dll
 C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\MolesterLootBug.pdb
+C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.Patches.Resource1.resources
+C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.csproj.GenerateResource.cache
