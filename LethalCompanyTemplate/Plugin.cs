@@ -81,10 +81,19 @@ namespace MolesterLootBug
 
             if (isHeldData.isHeld)
             {
-                // Move the player based on the Bug's position
-                ___serverPlayerPosition = isHeldData.HoarderInstance.serverPosition;
-                __instance.thisController.transform.localPosition = isHeldData.HoarderInstance.serverPosition;
-                ___snapToServerPosition = true;
+                // Move the player based on the Bug's position LEGACY
+                // This was super choppy
+                //___serverPlayerPosition = isHeldData.HoarderInstance.serverPosition;
+                //__instance.thisController.transform.localPosition = isHeldData.HoarderInstance.serverPosition;
+                //___snapToServerPosition = true;
+
+                // A better way to move to the bug would be to find the Vector distance from the lootbug
+                // use simple move method
+                
+                Vector3 bugPos = isHeldData.HoarderInstance.serverPosition;
+                Vector3 playPos = __instance.gameObject.transform.position;
+                Vector3 dest = bugPos - playPos;
+                __instance.thisController.SimpleMove(dest * 6.0f);
 
                 // log data
                 Plugin.mls.LogInfo($"PlayerServer Pos at {__instance.serverPlayerPosition}");
