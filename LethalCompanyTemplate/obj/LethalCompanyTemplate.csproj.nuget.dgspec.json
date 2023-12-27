@@ -5,10 +5,10 @@
   },
   "projects": {
     "C:\\Users\\Owen Strength\\source\\repos\\LethalCompanyMod\\LethalCompanyTemplate\\LethalCompanyTemplate.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "restore": {
         "projectUniqueName": "C:\\Users\\Owen Strength\\source\\repos\\LethalCompanyMod\\LethalCompanyTemplate\\LethalCompanyTemplate.csproj",
-        "projectName": "LethalCompanyTemplate",
+        "projectName": "MolesterLootBug",
         "projectPath": "C:\\Users\\Owen Strength\\source\\repos\\LethalCompanyMod\\LethalCompanyTemplate\\LethalCompanyTemplate.csproj",
         "packagesPath": "C:\\Users\\Owen Strength\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Owen Strength\\source\\repos\\LethalCompanyMod\\LethalCompanyTemplate\\obj\\",
@@ -26,7 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.bepinex.dev/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.1": {
