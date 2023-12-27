@@ -1,2 +1,5 @@
-# LethalCompanyTemplate
-A template for a BepInEx 5 Plugin, using the correct .csproj configuration for Lethal Company modding
+# Evil Loot Bug
+A Lethal Company Mod
+
+## Description
+A Mod For Lethal Company that allows the loot bug to pick you up and move you. You cannot move once you are pciked up. You will be dropped after 8 seconds
