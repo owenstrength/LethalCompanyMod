@@ -155,6 +155,8 @@ namespace MolesterLootBug
             {
                 Plugin.mls.LogInfo("Bug Holding Player.");
 
+                __instance.angryTimer += 2 * Time.deltaTime;
+
                 MethodInfo methodExitChase = typeof(HoarderBugAI).GetMethod("ExitChaseMode");
 
                 if (methodExitChase != null)
