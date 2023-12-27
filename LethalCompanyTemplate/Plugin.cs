@@ -107,7 +107,7 @@ namespace MolesterLootBug
                 Plugin.mls.LogInfo($"Is Being Held? {isHeldData.isHeld}");
 
                 // Check if the hold time has expired
-                if (isHeldData.holdTimeRemaining <= 0 || __instance.isPlayerDead)
+                if (isHeldData.holdTimeRemaining <= 0 || __instance.isPlayerDead || isHeldData.HoarderInstance.isEnemyDead)
                 {
                     // Release the player
                     isHeldData.isHeld = false;
@@ -156,7 +156,7 @@ namespace MolesterLootBug
 
         [HarmonyPatch(typeof(HoarderBugAI), "Update")]
         [HarmonyPostfix]
-        static void BugUpdate(HoarderBugAI __instance, ref bool ___IsAngry)
+        static void BugUpdate(HoarderBugAI __instance, ref float __timeSinceHittingPlayer)
         {
             var isHoldingData = __instance.gameObject.GetComponent<HoldingData>();
 
@@ -166,32 +166,21 @@ namespace MolesterLootBug
 
                 __instance.angryTimer -= 2 * Time.deltaTime;
                 // isAngry is private
-                ___IsAngry = false;
                 __instance.angryAtPlayer = null;
 
+                __timeSinceHittingPlayer = 5.0f;
 
-                MethodInfo methodExitChase = typeof(HoarderBugAI).GetMethod("ExitChaseMode");
+                if (__instance.isEnemyDead)
+                {
+                    isHoldingData.isHoldingPlayer = false;
+                    var heldPlayerData = isHoldingData.HeldPlayer.gameObject.GetComponent<BeingHeldData>();
+                    heldPlayerData.isHeld = false;
+                }
 
-                if (methodExitChase != null)
-                {
-                    methodExitChase.Invoke(__instance, null);
-                }
-                else
-                {
-                    Plugin.mls.LogWarning("ExitChaseMode Method DNE");
-                }
+                
             }
         }
 
-        // fix getting stuck when bug is killed
-        [HarmonyPatch(typeof(HoarderBugAI), "KillEnemy")]
-        [HarmonyPrefix]
-        static void BugKill(HoarderBugAI __instance)
-        {
-            var isHoldingData = __instance.gameObject.GetComponent<HoldingData>();
-            isHoldingData.isHoldingPlayer = false;
-            isHoldingData.HeldPlayer.GetComponent<BeingHeldData>().isHeld = false;
-        }
 
     }
 }
