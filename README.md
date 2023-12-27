@@ -1,2 +1,3 @@
-# LethalCompanyTemplate
-A template for a BepInEx 5 Plugin, using the correct .csproj configuration for Lethal Company modding
+# Evil Loot Bug
+A mod using BepInEx 5 Plugin
+Lootbug will steal you and run away with you
