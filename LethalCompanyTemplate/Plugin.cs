@@ -1,6 +1,7 @@
 ﻿using BepInEx;
 using GameNetcodeStuff;
 using BepInEx.Logging;
+using BepInEx.Configuration;
 using HarmonyLib;
 using UnityEngine;
 using System;
@@ -27,8 +28,14 @@ namespace MolesterLootBug
         internal static ManualLogSource mls;
         internal static System.Random random = new System.Random();
 
-        private static float bugHoldTime = 8.0f;
-
+        private ConfigEntry<int> grabPercentageConfig;
+        private static ConfigEntry<float> bugHoldTimeConfig;
+        private static float bugHoldTime;
+        private static float grabPercentage;  //i suppose that it's faster and lighter
+                                              //to read a normal variable
+                                              //instead of 
+                                              //a configEntry.value variable.
+                                
         void Awake()
         {
             // entry point of mod
@@ -38,10 +45,26 @@ namespace MolesterLootBug
                 Instance = this;
             }
 
+            grabPercentageConfig = ((BaseUnityPlugin)this).Config.Bind<int>("General", "how often do you want the lootbug to grab you? 1 - 10", 5, "1 is the minimum and 10 is the maximum");
+
+            if (grabPercentageConfig.Value < 1)
+                grabPercentage = 1;
+            else if (grabPercentageConfig.Value > 10)
+                grabPercentage = 10;
+            else
+                grabPercentage = grabPercentageConfig.Value;
+
+
+            bugHoldTimeConfig = ((BaseUnityPlugin)this).Config.Bind<float>("General", "how many seconds you want the lootbug to rub his dirty little fingers around your body?", 8f, "wont accept negative numbers");
+
+            if (bugHoldTimeConfig.Value < 1)
+                bugHoldTime = 1;
+            else
+                bugHoldTime = bugHoldTimeConfig.Value;
             mls = BepInEx.Logging.Logger.CreateLogSource(PLUGIN_GUID);
 
-            mls.LogInfo("Mod Awake OWEN GOATED");
-
+            mls.LogInfo("Mod Awake OWEN GOATED \n");
+            mls.LogInfo("backed up by Mirko's technologies TM \n -----------------------------------------------------------\n (--->>>> https://github.com/TheMirkMan :) )\n LOOTBUG HOLD TIME IS SET TO: \t\t" + bugHoldTime + " SECONDS \n LOOTBUG HOLD PERCENTAGE IS SET TO: \t" + grabPercentage + "0% \n-----------------------------------------------------------\n");
             harmony.PatchAll(typeof(Plugin));
 
         }
@@ -141,7 +164,7 @@ namespace MolesterLootBug
         {
             var isHoldingData = __instance.gameObject.GetComponent<HoldingData>();
 
-            if (isHoldingData.isHoldingPlayer == false && Plugin.random.Next(0, 2) == 0 && !__instance.isEnemyDead && isHoldingData.CanHoldTime <= 0)
+            if (isHoldingData.isHoldingPlayer == false && Plugin.random.Next(1, 10) <= grabPercentage && !__instance.isEnemyDead && isHoldingData.CanHoldTime <= 0)
             {
                 var playerControllerB = other.GetComponent<PlayerControllerB>();
 
@@ -157,7 +180,7 @@ namespace MolesterLootBug
 
         [HarmonyPatch(typeof(HoarderBugAI), "Update")]
         [HarmonyPostfix]
-        static void BugUpdate(HoarderBugAI __instance)
+        static void BugUpdate(HoarderBugAI __instance, ref float ___timeSinceHittingPlayer)
         {
             var isHoldingData = __instance.gameObject.GetComponent<HoldingData>();
 
@@ -169,7 +192,7 @@ namespace MolesterLootBug
                 // isAngry is private
                 __instance.angryAtPlayer = null;
 
-                __instance.timeSinceHittingPlayer = -5.0f;
+                ___timeSinceHittingPlayer = -5.0f;
 
                 if (__instance.isEnemyDead)
                 {

@@ -46,3 +46,18 @@ C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\bin\D
 C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\MolesterLootBug.dll
 C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\MolesterLootBug.pdb
 C:\Users\Owen Strength\source\repos\LethalCompanyMod\LethalCompanyTemplate\bin\Debug\netstandard2.1\Assembly-CSharp-nstrip.dll
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.csproj.AssemblyReference.cache
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\obj\Debug\netstandard2.1\MyPluginInfo.cs
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.AssemblyInfoInputs.cache
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.AssemblyInfo.cs
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.csproj.CoreCompileInputs.cache
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\bin\Debug\netstandard2.1\MolesterLootBug.deps.json
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\bin\Debug\netstandard2.1\MolesterLootBug.dll
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\bin\Debug\netstandard2.1\MolesterLootBug.pdb
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\bin\Debug\netstandard2.1\Assembly-CSharp-firstpass.dll
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\bin\Debug\netstandard2.1\Assembly-CSharp.dll
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\bin\Debug\netstandard2.1\Unity.Netcode.Runtime.dll
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.csproj.CopyComplete
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\obj\Debug\netstandard2.1\MolesterLootBug.dll
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\obj\Debug\netstandard2.1\MolesterLootBug.pdb

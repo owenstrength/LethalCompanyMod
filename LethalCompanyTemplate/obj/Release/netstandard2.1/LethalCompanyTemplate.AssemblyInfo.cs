@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("MolesterLootBug")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("A Mod for Lethal Company")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.1.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1")]
