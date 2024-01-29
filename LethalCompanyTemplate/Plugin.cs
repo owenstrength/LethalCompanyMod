@@ -35,7 +35,7 @@ namespace MolesterLootBug
                                               //to read a normal variable
                                               //instead of 
                                               //a configEntry.value variable.
-                                              
+                                
         void Awake()
         {
             // entry point of mod
@@ -64,13 +64,7 @@ namespace MolesterLootBug
             mls = BepInEx.Logging.Logger.CreateLogSource(PLUGIN_GUID);
 
             mls.LogInfo("Mod Awake OWEN GOATED \n");
-            mls.LogInfo("backed up by Mirko's technologies TM \n");
-            mls.LogInfo("-----------------------------------------------------------\n");
-            mls.LogInfo("(--->>>> https://github.com/TheMirkMan :) )\n");
-            mls.LogInfo("-----------------------------------------------------------\n");
-            mls.LogInfo("LOOTBUG HOLD TIME IS SET TO: " + bugHoldTime + " SECONDS \n");
-            mls.LogInfo("LOOTBUG HOLD PERCENTAGE IS SET TO: " + grabPercentage + "0%");
-            mls.LogInfo("-----------------------------------------------------------\n");
+            mls.LogInfo("backed up by Mirko's technologies TM \n -----------------------------------------------------------\n (--->>>> https://github.com/TheMirkMan :) )\n LOOTBUG HOLD TIME IS SET TO: \t\t" + bugHoldTime + " SECONDS \n LOOTBUG HOLD PERCENTAGE IS SET TO: \t" + grabPercentage + "0% \n-----------------------------------------------------------\n");
             harmony.PatchAll(typeof(Plugin));
 
         }
@@ -186,7 +180,7 @@ namespace MolesterLootBug
 
         [HarmonyPatch(typeof(HoarderBugAI), "Update")]
         [HarmonyPostfix]
-        static void BugUpdate(HoarderBugAI __instance)
+        static void BugUpdate(HoarderBugAI __instance, ref float ___timeSinceHittingPlayer)
         {
             var isHoldingData = __instance.gameObject.GetComponent<HoldingData>();
 
@@ -198,7 +192,7 @@ namespace MolesterLootBug
                 // isAngry is private
                 __instance.angryAtPlayer = null;
 
-                __instance.timeSinceHittingPlayer = -5.0f;
+                ___timeSinceHittingPlayer = -5.0f;
 
                 if (__instance.isEnemyDead)
                 {

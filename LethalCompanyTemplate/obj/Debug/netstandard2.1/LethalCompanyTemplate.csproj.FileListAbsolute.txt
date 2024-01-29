@@ -52,4 +52,12 @@ C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\obj\Debug\
 C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.AssemblyInfoInputs.cache
 C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.AssemblyInfo.cs
 C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.csproj.CoreCompileInputs.cache
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\bin\Debug\netstandard2.1\MolesterLootBug.deps.json
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\bin\Debug\netstandard2.1\MolesterLootBug.dll
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\bin\Debug\netstandard2.1\MolesterLootBug.pdb
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\bin\Debug\netstandard2.1\Assembly-CSharp-firstpass.dll
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\bin\Debug\netstandard2.1\Assembly-CSharp.dll
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\bin\Debug\netstandard2.1\Unity.Netcode.Runtime.dll
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.csproj.CopyComplete
 C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\obj\Debug\netstandard2.1\MolesterLootBug.dll
+C:\Users\Mirko\Documents\GitHub\MolesterLootBug\LethalCompanyTemplate\obj\Debug\netstandard2.1\MolesterLootBug.pdb

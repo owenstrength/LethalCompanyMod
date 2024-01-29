@@ -24,7 +24,7 @@
 
     <ItemGroup>
       <Reference Include="0Harmony">
-        <HintPath>F:\SteamLibrary\steamapps\common\Lethal Company\BepInEx\core\0Harmony.dll</HintPath>
+        <HintPath>Assemblies\0Harmony.dll</HintPath>
       </Reference>
       <Reference Include="Assembly-CSharp-firstpass">
         <HintPath>\Assemblies\Assembly-CSharp-firstpass.dll</HintPath>
@@ -33,7 +33,7 @@
         <HintPath>\Assemblies\Assembly-CSharp.dll</HintPath>
       </Reference>
       <Reference Include="BepInEx">
-        <HintPath>F:\SteamLibrary\steamapps\common\Lethal Company\BepInEx\core\BepInEx.dll</HintPath>
+        <HintPath>\Assemblies\BepInEx.dll</HintPath>
       </Reference>
       <Reference Include="Unity.Netcode.Runtime">
         <HintPath>\Assemblies\Unity.Netcode.Runtime.dll</HintPath>
